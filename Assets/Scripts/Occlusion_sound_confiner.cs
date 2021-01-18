@@ -21,9 +21,8 @@ public class Occlusion_sound_confiner : MonoBehaviour
 
     void Start()
     {
-        
+        SoundWidth = 1.0f;
         PlayerObject = GameObject.FindGameObjectWithTag("Head");
-        print(PlayerObject);
         updateStep = 1f / updateRate;
         OcclusionLayer = LayerMask.GetMask("Occlusion"); 
 
@@ -103,7 +102,7 @@ public class Occlusion_sound_confiner : MonoBehaviour
     private void SetParameter()
     {
         AkSoundEngine.SetRTPCValue("Occlution", lineCastHitCount / 9); // устанавливаем RTPC в нужное положение
-        print(lineCastHitCount / 9);
+       // print(lineCastHitCount / 9);
         
         
     }

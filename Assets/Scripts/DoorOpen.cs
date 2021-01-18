@@ -43,7 +43,7 @@ public class DoorOpen : MonoBehaviour
 
             }
 
-            if (Input.GetKeyDown(KeyCode.O))
+            if (Input.GetButtonDown("Open"))
             {
                 AudioPlayer.playSFX(OpenDoorSound);
                 if (open == false)

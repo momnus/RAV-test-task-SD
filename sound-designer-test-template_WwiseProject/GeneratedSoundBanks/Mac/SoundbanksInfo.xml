@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="135">
 	<RootPaths>
-		<ProjectRoot>D:\!GameAudioLearn\sound-designer-test-template\sound-designer-test-template_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\!GameAudioLearn\sound-designer-test-template\sound-designer-test-template_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>D:\!GameAudioLearn\sound-designer-test-template\sound-designer-test-template_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>F:\!GameAudioLearn\Test_work\RAV-test-task-SD\sound-designer-test-template_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>F:\!GameAudioLearn\Test_work\RAV-test-task-SD\sound-designer-test-template_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>F:\!GameAudioLearn\Test_work\RAV-test-task-SD\sound-designer-test-template_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\!GameAudioLearn\sound-designer-test-template\sound-designer-test-template_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>F:\!GameAudioLearn\Test_work\RAV-test-task-SD\sound-designer-test-template_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -16,7 +16,7 @@
 			<ShortName>Game</ShortName>
 			<Path>Game.bnk</Path>
 			<IncludedEvents>
-				<Event Id="352130103" Name="Birds" ObjectPath="\Events\Ambience\Objects\Birds" MaxAttenuation="3.000000" DurationType="Infinite">
+				<Event Id="352130103" Name="Birds" ObjectPath="\Events\Ambience\Objects\Birds" MaxAttenuation="6.000000" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="170767067" Language="SFX">
 							<ShortName>Objects\Birds\ANM-sparrow 4.wav</ShortName>
@@ -84,15 +84,15 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2579240936" Name="Children" ObjectPath="\Events\Ambience\Objects\Children" DurationType="OneShot" DurationMin="17.754906" DurationMax="17.754906">
+				<Event Id="2579240936" Name="Children" ObjectPath="\Events\Ambience\Objects\Children" MaxAttenuation="20.000000" DurationType="OneShot" DurationMin="17.754906" DurationMax="17.754906">
 					<IncludedMemoryFiles>
 						<File Id="232342335" Language="SFX">
 							<ShortName>OneShots\Pod'ezd.wav</ShortName>
-							<Path>SFX\OneShots\Pod'ezd_94BA18E7.wem</Path>
+							<Path>SFX\OneShots\Pod'ezd_9C6EE857.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1584507803" Name="Click" ObjectPath="\Events\Action\Click" DurationType="OneShot" DurationMin="1.513103" DurationMax="1.698401">
+				<Event Id="1584507803" Name="Click" ObjectPath="\Events\Action\Click" MaxAttenuation="6.000000" DurationType="OneShot" DurationMin="1.513103" DurationMax="1.698401">
 					<IncludedMemoryFiles>
 						<File Id="755420733" Language="SFX">
 							<ShortName>Objects\Door\wood-door-light-open-and-shut.wav</ShortName>
@@ -100,7 +100,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1405443347" Name="CloseDoor" ObjectPath="\Events\Action\CloseDoor" DurationType="OneShot" DurationMin="0.562871" DurationMax="0.875165">
+				<Event Id="1405443347" Name="CloseDoor" ObjectPath="\Events\Action\CloseDoor" MaxAttenuation="6.000000" DurationType="OneShot" DurationMin="0.562871" DurationMax="0.875165">
 					<IncludedMemoryFiles>
 						<File Id="2771745" Language="SFX">
 							<ShortName>Objects\Door\46-DOOR, METAL = OLD RATTLY DOOR_ OPEN.wav</ShortName>
@@ -383,7 +383,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3783318571" Name="Junk" ObjectPath="\Events\Ambience\Objects\Junk" MaxAttenuation="3.000000" DurationType="Infinite">
+				<Event Id="3783318571" Name="Junk" ObjectPath="\Events\Ambience\Objects\Junk" MaxAttenuation="6.000000" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="16168692" Language="SFX">
 							<ShortName>Objects\Junk\Cans and Small Containers - Processed (Tape) Junk, Metal, Aluminum Cans, Rustle, Long Tail 01.wav</ShortName>
@@ -427,19 +427,19 @@
 					<IncludedMemoryFiles>
 						<File Id="101064938" Language="SFX">
 							<ShortName>OneShots\keys-jingle-loud.wav</ShortName>
-							<Path>SFX\OneShots\keys-jingle-loud_C1F52A07.wem</Path>
+							<Path>SFX\OneShots\keys-jingle-loud_EB6A2C30.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="536925593" Name="KeyDrop" ObjectPath="\Events\Ambience\Objects\KeyDrop" DurationType="OneShot" DurationMin="2.828979" DurationMax="2.828979">
+				<Event Id="536925593" Name="KeyDrop" ObjectPath="\Events\Ambience\Objects\KeyDrop" MaxAttenuation="6.000000" DurationType="OneShot" DurationMin="2.828979" DurationMax="2.828979">
 					<IncludedMemoryFiles>
 						<File Id="751763891" Language="SFX">
 							<ShortName>OneShots\paint-key-down-stairs-loop-me.wav</ShortName>
-							<Path>SFX\OneShots\paint-key-down-stairs-loop-me_C1F52A07.wem</Path>
+							<Path>SFX\OneShots\paint-key-down-stairs-loop-me_EB6A2C30.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="657744959" Name="Lamp" ObjectPath="\Events\Ambience\Objects\Lamp" DurationType="Infinite">
+				<Event Id="657744959" Name="Lamp" ObjectPath="\Events\Ambience\Objects\Lamp" MaxAttenuation="6.000000" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="189578174" Language="SFX">
 							<ShortName>Objects\Lamps\Spark by BMacZero Id-94132.wav</ShortName>
@@ -467,7 +467,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2122995345" Name="OpenDoor" ObjectPath="\Events\Action\OpenDoor" DurationType="OneShot" DurationMin="0.935446" DurationMax="1.173970">
+				<Event Id="2122995345" Name="OpenDoor" ObjectPath="\Events\Action\OpenDoor" MaxAttenuation="6.000000" DurationType="OneShot" DurationMin="0.935446" DurationMax="1.173970">
 					<IncludedMemoryFiles>
 						<File Id="123995606" Language="SFX">
 							<ShortName>Objects\Door\46-DOOR, METAL = OLD RATTLY DOOR_ OPEN.wav</ShortName>
@@ -479,7 +479,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2227957873" Name="Rats" ObjectPath="\Events\Ambience\Objects\Rats" MaxAttenuation="3.000000" DurationType="Infinite">
+				<Event Id="2227957873" Name="Rats" ObjectPath="\Events\Ambience\Objects\Rats" MaxAttenuation="6.000000" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="105407734" Language="SFX">
 							<ShortName>Objects\Mouse\Mouse Squeaks-001.wav</ShortName>
@@ -539,7 +539,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="348022313" Name="Room01" ObjectPath="\Events\Ambience\Rooms\Room01" DurationType="Infinite">
+				<Event Id="348022313" Name="Room01" ObjectPath="\Events\Rooms\Room01" MaxAttenuation="2.000000" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="1067454634" Language="SFX">
 							<ShortName>On the Way — Vlad Gluschenko [Music promoted by Audio Library].wav</ShortName>
@@ -547,15 +547,15 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="348022314" Name="Room02" ObjectPath="\Events\Ambience\Rooms\Room02" DurationType="Infinite">
+				<Event Id="348022314" Name="Room02" ObjectPath="\Events\Rooms\Room02" MaxAttenuation="2.000000" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="777974028" Language="SFX">
 							<ShortName>Ssora_sosedei.wav</ShortName>
-							<Path>SFX\Ssora_sosedei_C1F52A07.wem</Path>
+							<Path>SFX\Ssora_sosedei_DDE465CC.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="348022315" Name="Room03" ObjectPath="\Events\Ambience\Rooms\Room03" DurationType="Infinite">
+				<Event Id="348022315" Name="Room03" ObjectPath="\Events\Rooms\Room03" MaxAttenuation="2.000000" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="970227530" Language="SFX">
 							<ShortName>Zaur-Live-cuts.wav</ShortName>
@@ -563,7 +563,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1359360140" Name="Room4" ObjectPath="\Events\Ambience\Rooms\Room4" DurationType="Infinite">
+				<Event Id="1359360140" Name="Room4" ObjectPath="\Events\Rooms\Room4" MaxAttenuation="2.000000" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="172966775" Language="SFX">
 							<ShortName>187032__dobrymolodec__russian-speech.wav</ShortName>
@@ -700,7 +700,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2654748154" Name="Water" ObjectPath="\Events\Ambience\Objects\Water" DurationType="Infinite">
+				<Event Id="2654748154" Name="Water" ObjectPath="\Events\Ambience\Objects\Water" MaxAttenuation="6.000000" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="798184924" Language="SFX">
 							<ShortName>Objects\Water\Ambience, Tunnel, Pipes, Water Running SND8621.wav</ShortName>
@@ -708,7 +708,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2824303332" Name="Water_Drip" ObjectPath="\Events\Ambience\Objects\Water_Drip" DurationType="Infinite">
+				<Event Id="2824303332" Name="Water_Drip" ObjectPath="\Events\Ambience\Objects\Water_Drip" MaxAttenuation="6.000000" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="79655522" Language="SFX">
 							<ShortName>Objects\Water\Water, Drip-003.wav</ShortName>

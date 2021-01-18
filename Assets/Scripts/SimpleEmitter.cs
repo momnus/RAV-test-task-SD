@@ -13,13 +13,13 @@ public class SimpleEmitter : MonoBehaviour
     {
         
         if (StartEvent != null)
-        { AudioPlayer.playSFX(StartEvent, this.gameObject); }
+        { AudioPlayer.playSFX(StartEvent, gameObject); }
         else Debug.Log("no sfx found with name: " + StartEvent);
     }
     private void OnDestroy()
     {
         if (StopEvent !=null)
-        { AudioPlayer.playSFX(StopEvent,this.gameObject); }
+        { AudioPlayer.playSFX(StopEvent, gameObject); }
         else Debug.Log("no sfx found with name: " + StopEvent);
 
     }

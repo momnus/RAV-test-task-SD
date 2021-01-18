@@ -61,3 +61,6 @@ crashlytics-build.properties
 # Wwise
 /sound-designer-test-template_WwiseProject/Originals/SFX/*.akd
 /sound-designer-test-template_WwiseProject/.cache/
+sound-designer-test-template_WwiseProject/ProfilingSession10.prof
+sound-designer-test-template_WwiseProject/ProfilingSession11.prof
+sound-designer-test-template_WwiseProject/ProfilingSession7.prof

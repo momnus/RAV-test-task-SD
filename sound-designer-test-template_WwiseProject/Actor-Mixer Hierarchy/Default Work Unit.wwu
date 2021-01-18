@@ -78,7 +78,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-11</Value>
+										<Value>-15</Value>
 									</ValueList>
 									<RTPCList>
 										<RTPC Name="" ID="{3E0DE44F-0096-4246-9857-C9C835582775}" ShortID="62902422">
@@ -1261,6 +1261,11 @@
 								<Sound Name="Quiet Room Nothing Specific" ID="{6A274C26-AFD5-45E0-AAC3-5F140C614F10}" ShortID="367199131">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -1292,10 +1297,15 @@
 						</BlendContainer>
 						<ActorMixer Name="Objects" ID="{3D290A1A-EAAE-4526-B23B-A57463FC22AF}" ShortID="772608868">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="OverrideConversion" Type="bool" Value="True"/>
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="CustomObjects" ID="{05B1C4B3-5124-4925-9338-97836C783916}" WorkUnitID="{112D0AF3-C632-42A6-9844-9D89C745D350}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Mono" ID="{F1F0BACA-9FA3-4CA2-BDB1-646B58D1C88B}" WorkUnitID="{6D975F11-BA91-425B-BF40-3C7D32472032}"/>
 								</Reference>
@@ -1367,6 +1377,7 @@
 										</Property>
 										<Property Name="OverrideConversion" Type="bool" Value="True"/>
 										<Property Name="OverrideOutput" Type="bool" Value="True"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-1</Value>
@@ -2644,7 +2655,6 @@
 										<Property Name="BlendBehavior" Type="int16" Value="1"/>
 										<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 										<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
-										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>7</Value>
@@ -3194,7 +3204,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-5</Value>
+												<Value>3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -3241,7 +3251,7 @@
 												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-22</Value>
+														<Value>-11</Value>
 													</ValueList>
 													<ModifierList>
 														<ModifierInfo>
@@ -3819,6 +3829,9 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Junk" ID="{3B320F4D-E56D-40F9-A015-D3C533A94D48}" ShortID="797684208">
 									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+										<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 										<Property Name="Lowpass" Type="int16">
 											<ValueList>
 												<Value>59</Value>
@@ -3835,7 +3848,6 @@
 											</ModifierList>
 										</Property>
 										<Property Name="OverrideEffect" Type="bool" Value="True"/>
-										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
@@ -3868,7 +3880,7 @@
 										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-7</Value>
+												<Value>-5</Value>
 											</ValueList>
 											<ModifierList>
 												<ModifierInfo>
@@ -4282,449 +4294,156 @@
 										</Sound>
 									</ChildrenList>
 								</RandomSequenceContainer>
-							</ChildrenList>
-						</ActorMixer>
-						<ActorMixer Name="Rooms" ID="{C00D01AB-0400-4133-99E6-D23CDAD28155}" ShortID="373134320">
-							<PropertyList>
-								<Property Name="OverrideOutput" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-10</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D975F11-BA91-425B-BF40-3C7D32472032}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Rooms" ID="{1879229E-F8BC-42B6-8E66-1A6E611E3E19}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<RandomSequenceContainer Name="Room2" ID="{559101D1-1EB8-4573-8958-0687C9DBB1D5}" ShortID="741734880">
+								<Sound Name="KeyDrop" ID="{88EB3390-D551-4A52-BF4A-3F7567AEAEAF}" ShortID="470916994">
 									<PropertyList>
-										<Property Name="Lowpass" Type="int16">
-											<ValueList>
-												<Value>50</Value>
-											</ValueList>
-										</Property>
-										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
-										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
-										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
-										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{CB2BE680-CF16-441E-8472-9BF37A6360A7}">
-														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="5"/>
-															<Property Name="Min" Type="Real64" Value="-1"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D975F11-BA91-425B-BF40-3C7D32472032}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="CustomObjects" ID="{176622FA-221A-434B-9482-5F238522B8BC}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="Ssora_sosedei" ID="{261656C2-B594-47E5-AF16-B48EAB5281D0}" ShortID="644163052">
-											<PropertyList>
-												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D975F11-BA91-425B-BF40-3C7D32472032}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="CustomObjects" ID="{176622FA-221A-434B-9482-5F238522B8BC}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Ssora_sosedei" ID="{A1DB3682-D3B2-4805-BB5F-C432BDFDD08F}">
-													<Language>SFX</Language>
-													<AudioFile>Ssora_sosedei.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="777974028"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Ssora_sosedei" ID="{A1DB3682-D3B2-4805-BB5F-C432BDFDD08F}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="Room1" ID="{A46981F4-B7D1-4ED5-8A0C-7917689CC1AF}" ShortID="968250324">
-									<PropertyList>
-										<Property Name="Highpass" Type="int16">
-											<ValueList>
-												<Value>46</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Lowpass" Type="int16">
-											<ValueList>
-												<Value>62</Value>
-											</ValueList>
-										</Property>
-										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
-										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
-										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
-										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{FD570975-2F6B-4694-961B-26D537596CDA}">
-														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="6"/>
-															<Property Name="Min" Type="Real64" Value="-3"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-6</Value>
+												<Value>3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="CustomObjects" ID="{05B1C4B3-5124-4925-9338-97836C783916}" WorkUnitID="{112D0AF3-C632-42A6-9844-9D89C745D350}"/>
+										</Reference>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D975F11-BA91-425B-BF40-3C7D32472032}"/>
+											<ObjectRef Name="Vorbis Auto Detect High" ID="{6F6A99BE-4FD1-49D3-89AF-54BE30CA1588}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="CustomObjects" ID="{176622FA-221A-434B-9482-5F238522B8BC}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="On the Way — Vlad Gluschenko [Music promoted by Audio Library]" ID="{850DAF4D-110E-45EF-8941-022F924708E3}" ShortID="311905197">
-											<PropertyList>
-												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D975F11-BA91-425B-BF40-3C7D32472032}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="CustomObjects" ID="{176622FA-221A-434B-9482-5F238522B8BC}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="On the Way — Vlad Gluschenko [Music promoted by Audio Library]" ID="{37DAE71F-227D-4371-BB4C-D5D38B15CC56}">
-													<Language>SFX</Language>
-													<AudioFile>On the Way — Vlad Gluschenko [Music promoted by Audio Library].wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="1067454634"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="On the Way — Vlad Gluschenko [Music promoted by Audio Library]" ID="{37DAE71F-227D-4371-BB4C-D5D38B15CC56}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
+										<AudioFileSource Name="paint-key-down-stairs-loop-me" ID="{642A8BF2-FEC7-496C-A61C-2E8D2C473B6B}">
+											<Language>SFX</Language>
+											<AudioFile>OneShots\paint-key-down-stairs-loop-me.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="751763891"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
-								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="Room3" ID="{5CAC4ABB-D2FF-41B7-8134-8E5DE9B26A5E}" ShortID="604619161">
+									<ActiveSourceList>
+										<ActiveSource Name="paint-key-down-stairs-loop-me" ID="{642A8BF2-FEC7-496C-A61C-2E8D2C473B6B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Keys" ID="{14FF255D-C871-4807-8EEA-C731648AADFA}" ShortID="1002833421">
 									<PropertyList>
-										<Property Name="Highpass" Type="int16">
-											<ValueList>
-												<Value>37</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Lowpass" Type="int16">
-											<ValueList>
-												<Value>56</Value>
-											</ValueList>
-										</Property>
-										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
-										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
-										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
-										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="4.5">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{73EB60FB-2CF9-478B-8E84-0FDC309BE263}">
-														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="2"/>
-															<Property Name="Min" Type="Real64" Value="-3"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-6</Value>
+												<Value>5</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D975F11-BA91-425B-BF40-3C7D32472032}"/>
+											<ObjectRef Name="Vorbis Auto Detect High" ID="{6F6A99BE-4FD1-49D3-89AF-54BE30CA1588}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="CustomObjects" ID="{176622FA-221A-434B-9482-5F238522B8BC}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Zaur-Live-cuts" ID="{7B04C3B1-2CAD-49A1-9F59-907927D21D60}" ShortID="18679143">
-											<PropertyList>
-												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D975F11-BA91-425B-BF40-3C7D32472032}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="CustomObjects" ID="{176622FA-221A-434B-9482-5F238522B8BC}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Zaur-Live-cuts" ID="{070B07CA-39C1-4BE1-848C-A71F8AA92F89}">
-													<Language>SFX</Language>
-													<AudioFile>Zaur-Live-cuts.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="970227530"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Zaur-Live-cuts" ID="{070B07CA-39C1-4BE1-848C-A71F8AA92F89}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
+										<AudioFileSource Name="keys-jingle-loud" ID="{21A445ED-D0D2-4684-A4B0-327194B2A8D6}">
+											<Language>SFX</Language>
+											<AudioFile>OneShots\keys-jingle-loud.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="101064938"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
-								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="Room4" ID="{4C28ACAC-51A7-4E77-AC74-B86A342B9CF2}" ShortID="904243093">
+									<ActiveSourceList>
+										<ActiveSource Name="keys-jingle-loud" ID="{21A445ED-D0D2-4684-A4B0-327194B2A8D6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Children" ID="{BEAD54B4-C4C9-4816-8CB4-5EF3EA076593}" ShortID="329317767">
 									<PropertyList>
-										<Property Name="Highpass" Type="int16">
+										<Property Name="3DPosition" Type="int16" Value="1"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+										<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+										<Property Name="MaxSoundPerInstance" Type="int16">
 											<ValueList>
-												<Value>37</Value>
+												<Value>1</Value>
 											</ValueList>
 										</Property>
-										<Property Name="Lowpass" Type="int16">
-											<ValueList>
-												<Value>56</Value>
-											</ValueList>
-										</Property>
-										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
-										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
-										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
-										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="4.5">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{6D2143AC-CBE3-4B21-A01E-CE6B3B68F47C}">
-														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="2"/>
-															<Property Name="Min" Type="Real64" Value="-3"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="OverrideOutput" Type="bool" Value="True"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-6</Value>
+												<Value>12</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Children" ID="{CAD1C6C3-9CEA-45FC-BD1C-C39FA4FEBE95}" WorkUnitID="{112D0AF3-C632-42A6-9844-9D89C745D350}"/>
+										</Reference>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D975F11-BA91-425B-BF40-3C7D32472032}"/>
+											<ObjectRef Name="Vorbis Auto Detect High" ID="{6F6A99BE-4FD1-49D3-89AF-54BE30CA1588}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="CustomObjects" ID="{176622FA-221A-434B-9482-5F238522B8BC}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<BlendContainer Name="Room4" ID="{04DC7F3E-9867-4E31-90F2-FAECB09B1079}" ShortID="728815272">
+										<AudioFileSource Name="Pod'ezd" ID="{DE2576EC-E29C-4734-AF51-3167EDF685C9}">
 											<PropertyList>
-												<Property Name="BlendBehavior" Type="int16" Value="1"/>
-												<Property Name="Highpass" Type="int16">
-													<ValueList>
-														<Value>11</Value>
-													</ValueList>
-												</Property>
+												<Property Name="FadeOutDuration" Type="Real64" Value="1.68864583333333"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="17.7549047619048"/>
 											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D975F11-BA91-425B-BF40-3C7D32472032}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
-												</Reference>
-											</ReferenceList>
+											<Language>SFX</Language>
+											<AudioFile>OneShots\Pod'ezd.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="232342335"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<PositioningInfo>
+										<Position Name="" ID="{90BD1EC4-6A82-421C-9C23-1D17704A6EDE}">
 											<ChildrenList>
-												<RandomSequenceContainer Name="Guitar" ID="{AE0CA056-83BA-4132-A2A8-06B53DECE849}" ShortID="122819001">
+												<Path2D Name="Children_Path" ID="{5487FB33-A37C-42B2-BB32-D78ADF2E067C}">
 													<PropertyList>
-														<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
-														<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
-														<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="4"/>
-														<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0"/>
-														<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-														<Property Name="Volume" Type="Real64">
-															<ValueList>
-																<Value>12</Value>
-															</ValueList>
-														</Property>
+														<Property Name="RandomX" Type="Real64" Value="3"/>
+														<Property Name="RandomZ" Type="Real64" Value="4"/>
 													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D975F11-BA91-425B-BF40-3C7D32472032}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<Sound Name="060 NylonGuitar Am4" ID="{56902627-2B8B-443F-9DB3-47AFD2415C13}" ShortID="1061449066">
-															<PropertyList>
-																<Property Name="Lowpass" Type="int16">
-																	<ValueList>
-																		<Value>14</Value>
-																	</ValueList>
-																</Property>
-															</PropertyList>
-															<ReferenceList>
-																<Reference Name="Conversion">
-																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D975F11-BA91-425B-BF40-3C7D32472032}"/>
-																</Reference>
-																<Reference Name="OutputBus">
-																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
-																</Reference>
-															</ReferenceList>
-															<ChildrenList>
-																<AudioFileSource Name="060 NylonGuitar Am4" ID="{85DAC21B-9C61-4E0A-9BA9-4BCB952048BD}">
-																	<Language>SFX</Language>
-																	<AudioFile>060 NylonGuitar Am4.wav</AudioFile>
-																	<MediaIDList>
-																		<MediaID ID="483253917"/>
-																	</MediaIDList>
-																</AudioFileSource>
-															</ChildrenList>
-															<ActiveSourceList>
-																<ActiveSource Name="060 NylonGuitar Am4" ID="{85DAC21B-9C61-4E0A-9BA9-4BCB952048BD}" Platform="Linked"/>
-															</ActiveSourceList>
-														</Sound>
-														<Sound Name="060 AcGuitar Am1" ID="{E241BA8C-E510-4112-BE3D-756E3954D45C}" ShortID="216742201">
-															<PropertyList>
-																<Property Name="Highpass" Type="int16">
-																	<ValueList>
-																		<Value>9</Value>
-																	</ValueList>
-																</Property>
-																<Property Name="Volume" Type="Real64">
-																	<ValueList>
-																		<Value>12</Value>
-																	</ValueList>
-																</Property>
-															</PropertyList>
-															<ReferenceList>
-																<Reference Name="Conversion">
-																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D975F11-BA91-425B-BF40-3C7D32472032}"/>
-																</Reference>
-																<Reference Name="OutputBus">
-																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
-																</Reference>
-															</ReferenceList>
-															<ChildrenList>
-																<AudioFileSource Name="060 AcGuitar Am1" ID="{0B43723E-596D-415E-A3F8-287688125F53}">
-																	<Language>SFX</Language>
-																	<AudioFile>060 AcGuitar Am1.wav</AudioFile>
-																	<MediaIDList>
-																		<MediaID ID="255753481"/>
-																	</MediaIDList>
-																</AudioFileSource>
-															</ChildrenList>
-															<ActiveSourceList>
-																<ActiveSource Name="060 AcGuitar Am1" ID="{0B43723E-596D-415E-A3F8-287688125F53}" Platform="Linked"/>
-															</ActiveSourceList>
-														</Sound>
-													</ChildrenList>
-												</RandomSequenceContainer>
-												<RandomSequenceContainer Name="Speech" ID="{C6B8D0C0-DB8D-43DA-97D1-089C09E3CFFD}" ShortID="190192697">
-													<PropertyList>
-														<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
-														<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
-														<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
-														<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="1.5">
-															<ModifierList>
-																<ModifierInfo>
-																	<Modifier Name="" ID="{8EEB2786-8B10-47A6-AE1F-CBD904096F51}">
-																		<PropertyList>
-																			<Property Name="Enabled" Type="bool" Value="True"/>
-																			<Property Name="Max" Type="Real64" Value="2"/>
-																			<Property Name="Min" Type="Real64" Value="-2"/>
-																		</PropertyList>
-																	</Modifier>
-																</ModifierInfo>
-															</ModifierList>
-														</Property>
-														<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D975F11-BA91-425B-BF40-3C7D32472032}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="CustomObjects" ID="{176622FA-221A-434B-9482-5F238522B8BC}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<Sound Name="187032__dobrymolodec__russian-speech" ID="{2C7B1954-F849-44FA-8887-868D6CEB1672}" ShortID="504392821">
-															<PropertyList>
-																<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-															</PropertyList>
-															<ReferenceList>
-																<Reference Name="Conversion">
-																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D975F11-BA91-425B-BF40-3C7D32472032}"/>
-																</Reference>
-																<Reference Name="OutputBus">
-																	<ObjectRef Name="CustomObjects" ID="{176622FA-221A-434B-9482-5F238522B8BC}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
-																</Reference>
-															</ReferenceList>
-															<ChildrenList>
-																<AudioFileSource Name="187032__dobrymolodec__russian-speech" ID="{235BA776-D23A-41F4-BE70-E1A8C1C0E1E2}">
-																	<Language>SFX</Language>
-																	<AudioFile>187032__dobrymolodec__russian-speech.wav</AudioFile>
-																	<MediaIDList>
-																		<MediaID ID="172966775"/>
-																	</MediaIDList>
-																</AudioFileSource>
-															</ChildrenList>
-															<ActiveSourceList>
-																<ActiveSource Name="187032__dobrymolodec__russian-speech" ID="{235BA776-D23A-41F4-BE70-E1A8C1C0E1E2}" Platform="Linked"/>
-															</ActiveSourceList>
-														</Sound>
-													</ChildrenList>
-												</RandomSequenceContainer>
+													<PointList>
+														<Point>
+															<XPos>-0.99991</XPos>
+															<YPos>27.70702</YPos>
+															<ZPos>5</ZPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+													</PointList>
+												</Path2D>
 											</ChildrenList>
-										</BlendContainer>
-									</ChildrenList>
-								</RandomSequenceContainer>
+										</Position>
+									</PositioningInfo>
+									<ActiveSourceList>
+										<ActiveSource Name="Pod'ezd" ID="{DE2576EC-E29C-4734-AF51-3167EDF685C9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</ActorMixer>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Character" ID="{79990373-1966-41CB-B33B-12AF0D9EF349}" ShortID="911872223">
 					<PropertyList>
+						<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
@@ -4732,7 +4451,7 @@
 							<ObjectRef Name="Vorbis Auto Detect High" ID="{6F6A99BE-4FD1-49D3-89AF-54BE30CA1588}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
+							<ObjectRef Name="Character" ID="{DDC61A5A-ABE1-4E90-8E08-FF9D895E08B9}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -6318,9 +6037,40 @@
 				</ActorMixer>
 				<ActorMixer Name="OneShots" ID="{C8E25909-5A29-4E54-9D57-5AEE53B52984}" ShortID="974048259">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="CustomObjects" ID="{05B1C4B3-5124-4925-9338-97836C783916}" WorkUnitID="{112D0AF3-C632-42A6-9844-9D89C745D350}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Vorbis Auto Detect High" ID="{6F6A99BE-4FD1-49D3-89AF-54BE30CA1588}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
+						</Reference>
+					</ReferenceList>
+				</ActorMixer>
+				<ActorMixer Name="Rooms" ID="{C00D01AB-0400-4133-99E6-D23CDAD28155}" ShortID="373134320">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+						<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
+						<Property Name="OverrideOutput" Type="bool" Value="True"/>
+						<Property Name="OverridePositioning" Type="bool" Value="True"/>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Rooms" ID="{A963ECD2-3A52-4F04-989B-EBE598CE992B}" WorkUnitID="{112D0AF3-C632-42A6-9844-9D89C745D350}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Vorbis Auto Detect High" ID="{6F6A99BE-4FD1-49D3-89AF-54BE30CA1588}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 						</Reference>
@@ -6329,11 +6079,29 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="KeyDrop" ID="{88EB3390-D551-4A52-BF4A-3F7567AEAEAF}" ShortID="470916994">
+						<RandomSequenceContainer Name="Room2" ID="{559101D1-1EB8-4573-8958-0687C9DBB1D5}" ShortID="741734880">
 							<PropertyList>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{CB2BE680-CF16-441E-8472-9BF37A6360A7}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="2"/>
+													<Property Name="Min" Type="Real64" Value="-1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>8</Value>
+										<Value>9</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -6342,112 +6110,382 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D975F11-BA91-425B-BF40-3C7D32472032}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
+									<ObjectRef Name="CustomObjects" ID="{176622FA-221A-434B-9482-5F238522B8BC}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="paint-key-down-stairs-loop-me" ID="{642A8BF2-FEC7-496C-A61C-2E8D2C473B6B}">
-									<Language>SFX</Language>
-									<AudioFile>OneShots\paint-key-down-stairs-loop-me.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="751763891"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="paint-key-down-stairs-loop-me" ID="{642A8BF2-FEC7-496C-A61C-2E8D2C473B6B}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Keys" ID="{14FF255D-C871-4807-8EEA-C731648AADFA}" ShortID="1002833421">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D975F11-BA91-425B-BF40-3C7D32472032}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="keys-jingle-loud" ID="{21A445ED-D0D2-4684-A4B0-327194B2A8D6}">
-									<Language>SFX</Language>
-									<AudioFile>OneShots\keys-jingle-loud.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="101064938"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="keys-jingle-loud" ID="{21A445ED-D0D2-4684-A4B0-327194B2A8D6}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Children" ID="{BEAD54B4-C4C9-4816-8CB4-5EF3EA076593}" ShortID="329317767">
-							<PropertyList>
-								<Property Name="3DPosition" Type="int16" Value="1"/>
-								<Property Name="3DSpatialization" Type="int16" Value="2"/>
-								<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
-								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
-								<Property Name="MaxSoundPerInstance" Type="int16">
-									<ValueList>
-										<Value>1</Value>
-									</ValueList>
-								</Property>
-								<Property Name="OverridePositioning" Type="bool" Value="True"/>
-								<Property Name="UseMaxSoundPerInstance" Type="bool">
-									<ValueList>
-										<Value>True</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Attenuation">
-									<ObjectRef Name="Children" ID="{CAD1C6C3-9CEA-45FC-BD1C-C39FA4FEBE95}" WorkUnitID="{112D0AF3-C632-42A6-9844-9D89C745D350}"/>
-								</Reference>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D975F11-BA91-425B-BF40-3C7D32472032}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Pod'ezd" ID="{DE2576EC-E29C-4734-AF51-3167EDF685C9}">
+								<Sound Name="Ssora_sosedei" ID="{261656C2-B594-47E5-AF16-B48EAB5281D0}" ShortID="644163052">
 									<PropertyList>
-										<Property Name="FadeOutDuration" Type="Real64" Value="1.68864583333333"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimEnd" Type="Real64" Value="17.7549047619048"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>OneShots\Pod'ezd.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="232342335"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<PositioningInfo>
-								<Position Name="" ID="{90BD1EC4-6A82-421C-9C23-1D17704A6EDE}">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D975F11-BA91-425B-BF40-3C7D32472032}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="CustomObjects" ID="{176622FA-221A-434B-9482-5F238522B8BC}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
+										</Reference>
+									</ReferenceList>
 									<ChildrenList>
-										<Path2D Name="Children_Path" ID="{5487FB33-A37C-42B2-BB32-D78ADF2E067C}">
+										<AudioFileSource Name="Ssora_sosedei" ID="{A1DB3682-D3B2-4805-BB5F-C432BDFDD08F}">
 											<PropertyList>
-												<Property Name="RandomX" Type="Real64" Value="3"/>
-												<Property Name="RandomZ" Type="Real64" Value="3"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.71334487011179"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="39.5396870861962"/>
+												<Property Name="VolumeOffset" Type="Real64">
+													<ValueList>
+														<Value>1.3</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
-											<PointList>
-												<Point>
-													<XPos>0.26591</XPos>
-													<YPos>52.54778</YPos>
-													<ZPos>3</ZPos>
-													<Flags>12</Flags>
-													<Time>0</Time>
-												</Point>
-											</PointList>
-										</Path2D>
+											<Language>SFX</Language>
+											<AudioFile>Ssora_sosedei.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="777974028"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
-								</Position>
-							</PositioningInfo>
-							<ActiveSourceList>
-								<ActiveSource Name="Pod'ezd" ID="{DE2576EC-E29C-4734-AF51-3167EDF685C9}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
+									<ActiveSourceList>
+										<ActiveSource Name="Ssora_sosedei" ID="{A1DB3682-D3B2-4805-BB5F-C432BDFDD08F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Room1" ID="{A46981F4-B7D1-4ED5-8A0C-7917689CC1AF}" ShortID="968250324">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>40</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>43</Value>
+									</ValueList>
+								</Property>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{FD570975-2F6B-4694-961B-26D537596CDA}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="1"/>
+													<Property Name="Min" Type="Real64" Value="-1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D975F11-BA91-425B-BF40-3C7D32472032}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="CustomObjects" ID="{176622FA-221A-434B-9482-5F238522B8BC}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="On the Way — Vlad Gluschenko [Music promoted by Audio Library]" ID="{850DAF4D-110E-45EF-8941-022F924708E3}" ShortID="311905197">
+									<PropertyList>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D975F11-BA91-425B-BF40-3C7D32472032}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="CustomObjects" ID="{176622FA-221A-434B-9482-5F238522B8BC}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="On the Way — Vlad Gluschenko [Music promoted by Audio Library]" ID="{37DAE71F-227D-4371-BB4C-D5D38B15CC56}">
+											<Language>SFX</Language>
+											<AudioFile>On the Way — Vlad Gluschenko [Music promoted by Audio Library].wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1067454634"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="On the Way — Vlad Gluschenko [Music promoted by Audio Library]" ID="{37DAE71F-227D-4371-BB4C-D5D38B15CC56}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Room3" ID="{5CAC4ABB-D2FF-41B7-8134-8E5DE9B26A5E}" ShortID="604619161">
+							<PropertyList>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="2">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{73EB60FB-2CF9-478B-8E84-0FDC309BE263}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="1"/>
+													<Property Name="Min" Type="Real64" Value="-2"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D975F11-BA91-425B-BF40-3C7D32472032}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="CustomObjects" ID="{176622FA-221A-434B-9482-5F238522B8BC}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Zaur-Live-cuts" ID="{7B04C3B1-2CAD-49A1-9F59-907927D21D60}" ShortID="18679143">
+									<PropertyList>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D975F11-BA91-425B-BF40-3C7D32472032}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="CustomObjects" ID="{176622FA-221A-434B-9482-5F238522B8BC}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Zaur-Live-cuts" ID="{070B07CA-39C1-4BE1-848C-A71F8AA92F89}">
+											<Language>SFX</Language>
+											<AudioFile>Zaur-Live-cuts.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="970227530"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Zaur-Live-cuts" ID="{070B07CA-39C1-4BE1-848C-A71F8AA92F89}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Room4" ID="{4C28ACAC-51A7-4E77-AC74-B86A342B9CF2}" ShortID="904243093">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>23</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>37</Value>
+									</ValueList>
+								</Property>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="2">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{6D2143AC-CBE3-4B21-A01E-CE6B3B68F47C}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="1"/>
+													<Property Name="Min" Type="Real64" Value="-2"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D975F11-BA91-425B-BF40-3C7D32472032}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="CustomObjects" ID="{176622FA-221A-434B-9482-5F238522B8BC}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<BlendContainer Name="Room4" ID="{04DC7F3E-9867-4E31-90F2-FAECB09B1079}" ShortID="728815272">
+									<PropertyList>
+										<Property Name="BlendBehavior" Type="int16" Value="1"/>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>11</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D975F11-BA91-425B-BF40-3C7D32472032}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="Guitar" ID="{AE0CA056-83BA-4132-A2A8-06B53DECE849}" ShortID="122819001">
+											<PropertyList>
+												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="4"/>
+												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0"/>
+												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>12</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D975F11-BA91-425B-BF40-3C7D32472032}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="060 NylonGuitar Am4" ID="{56902627-2B8B-443F-9DB3-47AFD2415C13}" ShortID="1061449066">
+													<PropertyList>
+														<Property Name="Lowpass" Type="int16">
+															<ValueList>
+																<Value>14</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D975F11-BA91-425B-BF40-3C7D32472032}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="060 NylonGuitar Am4" ID="{85DAC21B-9C61-4E0A-9BA9-4BCB952048BD}">
+															<Language>SFX</Language>
+															<AudioFile>060 NylonGuitar Am4.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="483253917"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="060 NylonGuitar Am4" ID="{85DAC21B-9C61-4E0A-9BA9-4BCB952048BD}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="060 AcGuitar Am1" ID="{E241BA8C-E510-4112-BE3D-756E3954D45C}" ShortID="216742201">
+													<PropertyList>
+														<Property Name="Highpass" Type="int16">
+															<ValueList>
+																<Value>9</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>12</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D975F11-BA91-425B-BF40-3C7D32472032}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="060 AcGuitar Am1" ID="{0B43723E-596D-415E-A3F8-287688125F53}">
+															<Language>SFX</Language>
+															<AudioFile>060 AcGuitar Am1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="255753481"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="060 AcGuitar Am1" ID="{0B43723E-596D-415E-A3F8-287688125F53}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Speech" ID="{C6B8D0C0-DB8D-43DA-97D1-089C09E3CFFD}" ShortID="190192697">
+											<PropertyList>
+												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="1.5">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{8EEB2786-8B10-47A6-AE1F-CBD904096F51}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="2"/>
+																	<Property Name="Min" Type="Real64" Value="-2"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D975F11-BA91-425B-BF40-3C7D32472032}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="CustomObjects" ID="{176622FA-221A-434B-9482-5F238522B8BC}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="187032__dobrymolodec__russian-speech" ID="{2C7B1954-F849-44FA-8887-868D6CEB1672}" ShortID="504392821">
+													<PropertyList>
+														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{6D975F11-BA91-425B-BF40-3C7D32472032}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="CustomObjects" ID="{176622FA-221A-434B-9482-5F238522B8BC}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="187032__dobrymolodec__russian-speech" ID="{235BA776-D23A-41F4-BE70-E1A8C1C0E1E2}">
+															<Language>SFX</Language>
+															<AudioFile>187032__dobrymolodec__russian-speech.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="172966775"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="187032__dobrymolodec__russian-speech" ID="{235BA776-D23A-41F4-BE70-E1A8C1C0E1E2}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+									</ChildrenList>
+								</BlendContainer>
+							</ChildrenList>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>

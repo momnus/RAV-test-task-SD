@@ -5,7 +5,6 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	85412153	Ambience			\Default Work Unit\Master Audio Bus\Ambience	
 	436743010	Character			\Default Work Unit\Master Audio Bus\Character	
-	1359360203	Rooms			\Default Work Unit\Master Audio Bus\Rooms	
 	1537061107	Wind			\Default Work Unit\Master Audio Bus\Wind	
 	1870773288	CustomObjects			\Default Work Unit\Master Audio Bus\CustomObjects	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	

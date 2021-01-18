@@ -24,7 +24,6 @@ public class Altitude : MonoBehaviour
         { AkSoundEngine.SetRTPCValue("Altitude", Camera.transform.position.y); }
         else { AkSoundEngine.SetRTPCValue("Altitude", 0); print("LowAir"); }
         
-        print(_altitude);
        
     }
 }

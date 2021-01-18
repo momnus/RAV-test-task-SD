@@ -7,6 +7,7 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="Ambience" ID="{877D3CBF-A00C-493E-A91F-BD81BEE29E40}" WorkUnitID="{877D3CBF-A00C-493E-A91F-BD81BEE29E40}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Action" ID="{D56772F9-618A-4B49-B59A-67C3DB3E47BD}" WorkUnitID="{D56772F9-618A-4B49-B59A-67C3DB3E47BD}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Rooms" ID="{A8A1CA8C-DD4B-4CF0-9400-25B905C62A32}" WorkUnitID="{A8A1CA8C-DD4B-4CF0-9400-25B905C62A32}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Character" ID="{9C954D37-0F4D-4D46-AE2F-F0D2A7F2C411}" WorkUnitID="{9C954D37-0F4D-4D46-AE2F-F0D2A7F2C411}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

@@ -180,54 +180,6 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
-				<Folder Name="Rooms" ID="{9863A7AF-5F49-4A1B-94BA-05AF15696D47}" ShortID="384176411">
-					<ChildrenList>
-						<Event Name="Room03" ID="{8A2C1333-3E6F-4527-89CA-1CBF62BC8ED9}">
-							<ChildrenList>
-								<Action Name="" ID="{8607F462-0501-435B-A291-35902AB31589}" ShortID="54992169">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Room3" ID="{5CAC4ABB-D2FF-41B7-8134-8E5DE9B26A5E}" WorkUnitID="{F1B51914-17A4-4597-A518-279D54528AB1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Room01" ID="{69B94265-24E1-4EEA-A495-1D586506EECF}">
-							<ChildrenList>
-								<Action Name="" ID="{65A486A7-B6C1-47CE-8112-698B21FB3EEA}" ShortID="328897711">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Room1" ID="{A46981F4-B7D1-4ED5-8A0C-7917689CC1AF}" WorkUnitID="{F1B51914-17A4-4597-A518-279D54528AB1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Room02" ID="{79204DF5-37AB-4D22-B145-E0EDE761C463}">
-							<ChildrenList>
-								<Action Name="" ID="{F0D24E98-0BE2-4BEB-8711-FCD17EF08BE3}" ShortID="106091387">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Room2" ID="{559101D1-1EB8-4573-8958-0687C9DBB1D5}" WorkUnitID="{F1B51914-17A4-4597-A518-279D54528AB1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Room4" ID="{833DE5F5-5FB4-4D90-B4FF-ED56CCCACE5B}">
-							<ChildrenList>
-								<Action Name="" ID="{609A529B-C05C-4991-A219-59F02BB79C19}" ShortID="890106395">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Room4" ID="{4C28ACAC-51A7-4E77-AC74-B86A342B9CF2}" WorkUnitID="{F1B51914-17A4-4597-A518-279D54528AB1}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-					</ChildrenList>
-				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
