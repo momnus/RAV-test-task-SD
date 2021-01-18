@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D56772F9-618A-4B49-B59A-67C3DB3E47BD}" SchemaVersion="97">
+	<Events>
+		<WorkUnit Name="Action" ID="{D56772F9-618A-4B49-B59A-67C3DB3E47BD}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Click" ID="{2573F4EB-823E-4ECC-B4A2-22259CC92B81}">
+					<ChildrenList>
+						<Action Name="" ID="{7B689AE4-99D2-443D-A621-5AE331DA5957}" ShortID="191987060">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Click" ID="{7C9796D9-87A8-4981-924E-CB7C3312E993}" WorkUnitID="{F1B51914-17A4-4597-A518-279D54528AB1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="OpenDoor" ID="{55C5FA65-EFF2-4DA8-8D54-2EC1D5E499B3}">
+					<ChildrenList>
+						<Action Name="" ID="{19AE6BAE-F6E3-4C52-A0E6-B81A3673EC4D}" ShortID="308092468">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Open" ID="{3C999008-B08B-43F6-81E1-D846A1D93889}" WorkUnitID="{F1B51914-17A4-4597-A518-279D54528AB1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="CloseDoor" ID="{E7530251-F79D-41EF-8A88-F502F51C7F82}">
+					<ChildrenList>
+						<Action Name="" ID="{40FF28B3-4B49-4401-8BFF-378426292154}" ShortID="451111368">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Close" ID="{4D1F11CA-448A-490D-9E1F-AFA21DAD26D4}" WorkUnitID="{F1B51914-17A4-4597-A518-279D54528AB1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Game_Start" ID="{BEA58DCB-E761-4176-B4AB-CC3F0618877A}">
+					<ChildrenList>
+						<Action Name="" ID="{A93E6694-4A04-42C6-B26C-4CFD53FCB3B2}" ShortID="791056882">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+								<Property Name="Volume" Type="Real64" Value="-96"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11FB4E68-8B29-4B68-8AD1-F6F877746193}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{03F5F45B-8273-4E8F-B745-CD312F8EC3A7}" ShortID="1009916821">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="6"/>
+								<Property Name="Delay" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{9C954D37-0F4D-4D46-AE2F-F0D2A7F2C411}" SchemaVersion="97">
+	<Events>
+		<WorkUnit Name="Character" ID="{9C954D37-0F4D-4D46-AE2F-F0D2A7F2C411}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Foosteps" ID="{181161AD-C6F8-462D-8F93-E095E2C8CA62}">
+					<ChildrenList>
+						<Action Name="" ID="{9AB2EF9D-1AE0-4DD4-B185-D9E238E5D2A5}" ShortID="445006124">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Clothes" ID="{ADB88F99-8C7D-4636-99D2-B3727294F4BD}" WorkUnitID="{F1B51914-17A4-4597-A518-279D54528AB1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{14E10F89-A04E-42AA-A9B1-19AED1C5B5F4}" ShortID="631854250">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Foosteps" ID="{3E543FDE-CB30-4848-850D-1B47F496F431}" WorkUnitID="{F1B51914-17A4-4597-A518-279D54528AB1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Jump" ID="{2F4CFD3A-0736-451C-8184-974332922618}">
+					<ChildrenList>
+						<Action Name="" ID="{42BA6A5A-8405-415D-A7D1-DAF3E7980D57}" ShortID="184787926">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Clothes" ID="{ADB88F99-8C7D-4636-99D2-B3727294F4BD}" WorkUnitID="{F1B51914-17A4-4597-A518-279D54528AB1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1D777B03-8B8C-4B52-B5FC-C5FF9FBC6BB5}" ShortID="488894542">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Jump_Swoosh" ID="{E8EE2435-C06C-47F7-91B1-C931429844AC}" WorkUnitID="{F1B51914-17A4-4597-A518-279D54528AB1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Collision" ID="{9537E222-F01C-4089-A21D-DAE3681BE442}">
+					<ChildrenList>
+						<Action Name="" ID="{2F24F056-B941-4BCF-AF07-87BE1BEF308C}" ShortID="1036675806">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.01"/>
+								<Property Name="Probability" Type="Real64" Value="30"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Voice" ID="{04361599-C5F3-4481-AB64-2871C8187461}" WorkUnitID="{F1B51914-17A4-4597-A518-279D54528AB1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2FC59899-669A-4F74-8691-F582FBED5D4F}" ShortID="585992737">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Hits" ID="{FFF4B6FE-AA5C-4D4F-BF98-FF5D6CA2ADDB}" WorkUnitID="{F1B51914-17A4-4597-A518-279D54528AB1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

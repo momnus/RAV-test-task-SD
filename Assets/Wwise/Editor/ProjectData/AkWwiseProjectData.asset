@@ -1,0 +1,335 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c36357962eecf49a149af53673fbea, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: dcfd0601e3afad439eb5d5047e6f2386
+    GuidInternal: 
+    m_lastTime: -8585909042794775808
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 684efb11298b684b8ad1f6f877746193
+    GuidInternal: 
+    m_lastTime: -8585908918120045808
+    List:
+    - name: Ambience
+      guid: 0472e985efabb947823bc3045e35ce41
+      id: 85412153
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: Ambience
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus\Ambience
+    - name: Character
+      guid: 5a1ac6dde1ab904e8e08ff9d895e08b9
+      id: 436743010
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: Character
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus\Character
+    - name: CustomObjects
+      guid: fa2266171a224b4394825f238522b8bc
+      id: 1870773288
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: Ambience
+        ObjectType: 2
+      - ElementName: CustomObjects
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus\Ambience\CustomObjects
+    - name: Master Audio Bus
+      guid: d8a41415a61d2a41a17e75ca0c2149f3
+      id: 3803692087
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 0341cd9e311c8f45b41558055da52f1c
+    GuidInternal: 
+    m_lastTime: -8585908891311415808
+    List:
+    - name: Game
+      guid: 6790cbaab337a344935d422740e410bb
+      id: 702482391
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Game
+        ObjectType: 7
+      Path: Default Work Unit\Game
+  EventWwu:
+  - PhysicalPath: Events\Action.wwu
+    ParentPath: Action
+    guid: f97267d58a61494bb59a67c3db3e47bd
+    GuidInternal: 
+    m_lastTime: -8585907216530105808
+    List:
+    - name: Click
+      guid: ebf473253e82cc4eb4a222259cc92b81
+      id: 1584507803
+      PathAndIcons:
+      - ElementName: Action
+        ObjectType: 12
+      - ElementName: Click
+        ObjectType: 3
+      Path: Action\Click
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Close
+      guid: 510253e79df7ef418a88f502f51c7f82
+      id: 1451272583
+      PathAndIcons:
+      - ElementName: Action
+        ObjectType: 12
+      - ElementName: Close
+        ObjectType: 3
+      Path: Action\Close
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Open
+      guid: 65fac555f2efa84d8d542ec1d5e499b3
+      id: 3072142513
+      PathAndIcons:
+      - ElementName: Action
+        ObjectType: 12
+      - ElementName: Open
+        ObjectType: 3
+      Path: Action\Open
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Test
+      guid: 8a8b2dc13c31a546a2da483763d12127
+      id: 3157003241
+      PathAndIcons:
+      - ElementName: Action
+        ObjectType: 12
+      - ElementName: Test
+        ObjectType: 3
+      Path: Action\Test
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  - PhysicalPath: Events\Ambience.wwu
+    ParentPath: Ambience
+    guid: bf3c7d870ca03e49a91fbd81bee29e40
+    GuidInternal: 
+    m_lastTime: -8585908892687335808
+    List:
+    - name: Hall
+      guid: d9e48fa5f65f0d4fba4ce0ea89eaeb35
+      id: 3633416828
+      PathAndIcons:
+      - ElementName: Ambience
+        ObjectType: 12
+      - ElementName: Hall
+        ObjectType: 3
+      Path: Ambience\Hall
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Lamp
+      guid: 230f467be18d994882607e97633c4e14
+      id: 657744959
+      PathAndIcons:
+      - ElementName: Ambience
+        ObjectType: 12
+      - ElementName: Lamp
+        ObjectType: 3
+      Path: Ambience\Lamp
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Rats
+      guid: ebc5a9985ea4524bb9ea08c8abe7b8fa
+      id: 2227957873
+      PathAndIcons:
+      - ElementName: Ambience
+        ObjectType: 12
+      - ElementName: Rats
+        ObjectType: 3
+      Path: Ambience\Rats
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Street
+      guid: e758ab2a3b83464e8dbc36487c4bd5bb
+      id: 4142189312
+      PathAndIcons:
+      - ElementName: Ambience
+        ObjectType: 12
+      - ElementName: Street
+        ObjectType: 3
+      Path: Ambience\Street
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Water
+      guid: 769b8a974140d24c8f5600407eddfc27
+      id: 2654748154
+      PathAndIcons:
+      - ElementName: Ambience
+        ObjectType: 12
+      - ElementName: Water
+        ObjectType: 3
+      Path: Ambience\Water
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Water_Drip
+      guid: 34dc66347644d747bab0573a10d2b1c8
+      id: 2824303332
+      PathAndIcons:
+      - ElementName: Ambience
+        ObjectType: 12
+      - ElementName: Water_Drip
+        ObjectType: 3
+      Path: Ambience\Water_Drip
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  - PhysicalPath: Events\Character.wwu
+    ParentPath: Character
+    guid: 374d959c4d0f464dae2ff0d2a7f2c411
+    GuidInternal: 
+    m_lastTime: -8585907188453155808
+    List:
+    - name: Collision
+      guid: 22e237951cf08940a21ddae3681be442
+      id: 1792046091
+      PathAndIcons:
+      - ElementName: Character
+        ObjectType: 12
+      - ElementName: Collision
+        ObjectType: 3
+      Path: Character\Collision
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Foosteps
+      guid: ad611118f8c62d468f93e095e2c8ca62
+      id: 1012989952
+      PathAndIcons:
+      - ElementName: Character
+        ObjectType: 12
+      - ElementName: Foosteps
+        ObjectType: 3
+      Path: Character\Foosteps
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Jump
+      guid: 3afd4c2f36071c458184974332922618
+      id: 3833651337
+      PathAndIcons:
+      - ElementName: Character
+        ObjectType: 12
+      - ElementName: Jump
+        ObjectType: 3
+      Path: Character\Jump
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  - PhysicalPath: Events\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 33abf43c5b214f44b4617aa1633b0cbd
+    GuidInternal: 
+    m_lastTime: -8585908892237665808
+    List: []
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 6ae5ed4ea65a5f49b967b44ef9cf2b03
+    GuidInternal: 
+    m_lastTime: -8585908926244725808
+    List:
+    - name: Altitude
+      guid: 833035e376602e4eb9a96476607dc495
+      id: 1141543723
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Altitude
+        ObjectType: 13
+      Path: Default Work Unit\Altitude
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 12239d308b3466449a95548515c58772
+    GuidInternal: 
+    m_lastTime: -8585909042794775808
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: c183e881a13d8c43be4a5a1d84b91259
+    GuidInternal: 
+    m_lastTime: -8585908938254385808
+    List:
+    - name: Surface
+      guid: 3407f64dab8a1f4394e8063a5cf24f6f
+      id: 1834394558
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Surface
+        ObjectType: 11
+      Path: Default Work Unit\Surface
+      values:
+      - name: Concrete
+        guid: 83c679616b72454f93ef504ac957ffb9
+        id: 841620460
+        PathAndIcons:
+        - ElementName: Concrete
+          ObjectType: 10
+      - name: Wood
+        guid: fd3909b1d2faae4fbbdbaa8c11a8a8c1
+        id: 2058049674
+        PathAndIcons:
+        - ElementName: Wood
+          ObjectType: 10
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 317308ff5d66be49a0aba3ccbb6f0fd7
+    GuidInternal: 
+    m_lastTime: -8585909042794775808
+    List: []
+  ExpandedItems:
+  - /sound-designer-test-template_WwiseProject
+  autoPopulateEnabled: 1
+  CurrentPluginConfig: 

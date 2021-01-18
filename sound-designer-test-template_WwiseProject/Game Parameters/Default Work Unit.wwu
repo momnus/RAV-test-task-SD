@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{4EEDE56A-5AA6-495F-B967-B44EF9CF2B03}" SchemaVersion="97">
+	<GameParameters>
+		<WorkUnit Name="Default Work Unit" ID="{4EEDE56A-5AA6-495F-B967-B44EF9CF2B03}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="Altitude" ID="{E3353083-6076-4E2E-B9A9-6476607DC495}">
+					<PropertyList>
+						<Property Name="BindToBuiltInParam" Type="int16" Value="1"/>
+						<Property Name="Color" Type="int16" Value="2"/>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="20"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="Occlution" ID="{B2B5BF17-F86A-4BD7-B377-D94D1971EE62}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="1"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{DBEBEB03-29B0-4899-A2EE-65627A73F404}" SchemaVersion="97">
+	<SoundcasterSessions>
+		<WorkUnit Name="Default Work Unit" ID="{DBEBEB03-29B0-4899-A2EE-65627A73F404}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="test" ID="{EEF46C8E-4D43-4279-804A-95EE8409320C}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Jump" ID="{2F4CFD3A-0736-451C-8184-974332922618}" WorkUnitID="{9C954D37-0F4D-4D46-AE2F-F0D2A7F2C411}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Birds" ID="{9BF89588-70B5-42F7-9A0D-1E27912F64ED}" WorkUnitID="{877D3CBF-A00C-493E-A91F-BD81BEE29E40}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Foosteps" ID="{181161AD-C6F8-462D-8F93-E095E2C8CA62}" WorkUnitID="{9C954D37-0F4D-4D46-AE2F-F0D2A7F2C411}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Collision" ID="{9537E222-F01C-4089-A21D-DAE3681BE442}" WorkUnitID="{9C954D37-0F4D-4D46-AE2F-F0D2A7F2C411}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="Occlution" ID="{B2B5BF17-F86A-4BD7-B377-D94D1971EE62}"/>
+							<Value>1</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Altitude" ID="{E3353083-6076-4E2E-B9A9-6476607DC495}"/>
+							<Value>0</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Concrete" ID="{6179C683-726B-4F45-93EF-504AC957FFB9}"/>
+						<CurrentSwitchRef Name="Concrete" ID="{E6629300-EBE5-4060-A090-0C186C516C99}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundcasterSessions>
+</WwiseDocument>

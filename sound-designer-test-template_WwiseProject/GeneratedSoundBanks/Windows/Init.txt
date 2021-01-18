@@ -1,0 +1,24 @@
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1141543723	Altitude			\Default Work Unit\Altitude	
+	1393118305	Occlution			\Default Work Unit\Occlution	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	85412153	Ambience			\Default Work Unit\Master Audio Bus\Ambience	
+	436743010	Character			\Default Work Unit\Master Audio Bus\Character	
+	1359360203	Rooms			\Default Work Unit\Master Audio Bus\Rooms	
+	1537061107	Wind			\Default Work Unit\Master Audio Bus\Wind	
+	1870773288	CustomObjects			\Default Work Unit\Master Audio Bus\CustomObjects	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	3633416828	Hall			\Default Work Unit\Master Audio Bus\Hall	
+	4142189312	Street			\Default Work Unit\Master Audio Bus\Street	
+
+Effect plug-ins	ID	Name	Type				Notes
+	1588715066	Echoes_Linear	Wwise Delay			
+	2791153688	Hall_Small	Wwise RoomVerb			
+
+Audio Devices	ID	Name	Type				Notes
+	2317455096	No_Output	No Output			
+	3859886410	System	System			
+
